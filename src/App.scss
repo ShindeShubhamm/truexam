@@ -1,0 +1,25 @@
+$color1: #173b80;
+$color2: #ffffff;
+$color3: #000000;
+
+$color4: #c0c0c0;
+$color4-hover: #b0b0b0;
+
+.App {
+  font-family: Roboto;
+  position: relative;
+}
+
+.app-btn {
+  font-family: Roboto;
+  padding: 10px;
+  cursor: pointer;
+  background-color: $color4;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover {
+    background-color: $color4-hover;
+  }
+}

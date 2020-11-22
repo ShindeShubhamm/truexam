@@ -1,0 +1,50 @@
+@import '../../App.scss';
+
+.create-task {
+  margin-top: 20px;
+  .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+}
+
+.task-form {
+  margin-top: 30px;
+  border-top: 1px solid $color4;
+  padding-top: 30px;
+  label {
+    display: flex;
+    .label {
+      margin: 10px 12px;
+      font-size: 14px;
+    }
+    .filename {
+      margin: 12px;
+      font-size: 12px;
+    }
+    .input-box {
+      margin: 8px 0;
+      font-family: Roboto;
+      padding: 2px;
+    }
+  }
+  .label-upload {
+    background-color: $color4;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    cursor: pointer;
+    .upload-button {
+      color: $color1;
+      position: absolute;
+      top: 8px;
+      left: 10px;
+    }
+  }
+  .submit-button {
+    margin-top: 28px;
+  }
+}

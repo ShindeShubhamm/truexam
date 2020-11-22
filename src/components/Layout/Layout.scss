@@ -1,0 +1,56 @@
+@import '../../App.scss';
+
+.layout {
+  height: 100vh;
+  .navbar-wrapper {
+    background-color: #173b80;
+    height: 68px;
+  }
+  .navbar {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  .logo-wrapper {
+    text-decoration: none;
+    width: 88px;
+    .logo {
+      margin: 0;
+      font-size: 22px;
+      color: $color2;
+    }
+    .logo-text {
+      width: 88px;
+      margin: 0;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: $color4;
+    }
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    .link {
+      font-size: 13px;
+      color: $color2;
+      text-decoration: none;
+      margin-left: 14px;
+      &:hover {
+        border-bottom: 1px solid $color4;
+      }
+    }
+    .link-active {
+      color: $color4;
+      border-bottom: 1px solid $color4;
+    }
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
