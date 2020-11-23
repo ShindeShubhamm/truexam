@@ -1,0 +1,81 @@
+@import '../../App.scss';
+
+.score-task {
+  margin: 20px 0 0;
+  .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  .info-text {
+    text-align: center;
+    font-weight: 400;
+    margin: 20px 0;
+    font-size: 13px;
+    color: #777;
+    .link {
+      color: $color1;
+      text-decoration: none;
+    }
+  }
+  .content {
+    border-top: 1px solid $color4;
+    margin-top: 30px;
+    padding-top: 20px;
+    .t-title {
+      font-size: 15px;
+      margin-top: 12px;
+      // color: #333;
+    }
+    .t-desc {
+      color: #777;
+      font-size: 13px;
+      white-space: pre-wrap;
+      margin-top: 10px;
+    }
+    .block-head {
+      color: $color1;
+      font-size: 16px;
+      margin: 10px 0 3px;
+      font-weight: 500;
+    }
+
+    .t-delete {
+      border-top: 1px solid $color4;
+      margin-top: 30px;
+      button {
+        cursor: pointer;
+        user-select: none;
+        margin: 12px 0;
+        background-color: #da0303;
+        border: none;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+  }
+  .task-image-wrapper {
+    width: 100%;
+    .task-image {
+      display: flex;
+      width: 300px;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .task-image-wrapper {
+      .task-image {
+        width: 62%;
+      }
+    }
+  }
+}

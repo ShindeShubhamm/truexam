@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 
 import ls from 'local-storage';
 import { Link } from 'react-router-dom';
+import TaskCard from '../common/TaskCard/TaskCard';
 import './Home.scss';
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
     setTimeout(() => {
       setTasks(ls.get('taskFiles') ?? []);
       setLoading(false);
-    }, 2000);
+    }, 200);
     // eslint-disable-next-line
   }, []);
 
@@ -27,17 +28,14 @@ const Home = () => {
             <div className="tasks-list">
               {tasks.map((t) => {
                 return (
-                  <div className="task-item" key={t.id}>
-                    <img
-                      src={ls.get(t.taskimage)}
-                      alt="Task"
-                      className="ti-img"
-                    />
-                    <div className="ti-details">
-                      <h3 className="ti-title">{t.taskname}</h3>
-                      <p className="ti-subtitle">{t.taskdesc}</p>
-                    </div>
-                  </div>
+                  <TaskCard
+                    key={t.id}
+                    taskimage={t.taskimage}
+                    taskname={t.taskname}
+                    taskdesc={t.taskdesc}
+                    id={t.id}
+                    showLink
+                  />
                 );
               })}
             </div>

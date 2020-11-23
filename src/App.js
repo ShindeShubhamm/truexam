@@ -55,8 +55,10 @@ const App = () => {
             />
             <Route
               exact
-              path="/score"
-              render={() => <ScoreTask setAlert={handleSetAlert} />}
+              path="/score/:id"
+              render={(props) => (
+                <ScoreTask {...props} setAlert={handleSetAlert} />
+              )}
             />
           </Switch>
         </Layout>

@@ -30,36 +30,3 @@
     }
   }
 }
-
-.task-item {
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-  .ti-img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 8px;
-    background-color: $color4;
-  }
-  .ti-details {
-    margin-left: 12px;
-    .ti-title {
-      margin: 0;
-      font-weight: 400;
-      font-size: 16px;
-    }
-    .ti-subtitle {
-      margin: 0;
-      font-size: 14px;
-      color: #777;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .ti-img {
-      width: 75px;
-      height: 75px;
-    }
-  }
-}

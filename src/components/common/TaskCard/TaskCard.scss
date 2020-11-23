@@ -1,0 +1,51 @@
+@import '../../../App.scss';
+
+.task-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  position: relative;
+  .ti-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: $color4;
+  }
+  .ti-details {
+    margin-left: 12px;
+    .ti-title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .ti-subtitle {
+      margin: 0;
+      font-size: 14px;
+      color: #777;
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+  }
+  .ti-score-mobile {
+    display: none;
+  }
+  .ti-score {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+  }
+
+  &:hover {
+    background-color: #fafafa;
+  }
+
+  @media (max-width: 600px) {
+    .ti-img {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}

@@ -6,7 +6,6 @@ import './Layout.scss';
 const links = [
   { name: 'Home', link: '/' },
   { name: 'Create', link: '/create' },
-  { name: 'Score', link: '/score' },
 ];
 
 const Layout = (props) => {
