@@ -23,6 +23,9 @@ const TaskForm = (props) => {
         accept="image/png, image/jpg, image/jpeg"
         hidden
         onChange={handleValue}
+        onClick={(e) => {
+          e.target.value = null;
+        }}
       />
 
       {/* Task Name */}
@@ -34,15 +37,20 @@ const TaskForm = (props) => {
           id="taskname"
           onChange={handleValue}
           className="input-box"
+          value={formData.taskname}
         />
       </label>
       <label htmlFor="taskdesc">
-        <p className="label">Task Name:</p>
+        <p className="label">Task Description:</p>
         <textarea
           name="taskdesc"
           id="taskdesc"
           onChange={handleValue}
-          className="input-box"
+          className="input-box input-area"
+          value={formData.taskdesc}
+          cols="4"
+          rows="5"
+          charswidth="23"
         />
       </label>
       <div className="submit-button">

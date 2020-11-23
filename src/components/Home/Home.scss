@@ -1,0 +1,65 @@
+@import '../../App.scss';
+
+.home {
+  margin: 20px 0 0;
+  .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: #555;
+    font-weight: 400;
+  }
+
+  .tasks-container {
+    border-top: 1px solid $color4;
+  }
+
+  .info-text {
+    text-align: center;
+    font-weight: 400;
+    margin: 20px 0;
+    font-size: 13px;
+    color: #777;
+    .link {
+      color: $color1;
+      text-decoration: none;
+    }
+  }
+}
+
+.task-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  .ti-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: $color4;
+  }
+  .ti-details {
+    margin-left: 12px;
+    .ti-title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .ti-subtitle {
+      margin: 0;
+      font-size: 14px;
+      color: #777;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ti-img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}

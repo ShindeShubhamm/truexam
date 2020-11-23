@@ -49,7 +49,9 @@ const App = () => {
             <Route
               exact
               path="/create"
-              render={() => <CreateTask setAlert={handleSetAlert} />}
+              render={(props) => (
+                <CreateTask {...props} setAlert={handleSetAlert} />
+              )}
             />
             <Route
               exact
