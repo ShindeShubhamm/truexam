@@ -17,6 +17,14 @@ const Home = () => {
     // eslint-disable-next-line
   }, []);
 
+  const handleDelete = (id) => {
+    const newTasks = tasks.filter((t) => t.id !== id);
+    setTasks(newTasks);
+    ls.set('taskFiles', newTasks);
+    ls.remove(`${id}File`);
+    ls.remove(`${id}Score`);
+  };
+
   return (
     <div className="home">
       <h1 className="title">Dashboard</h1>
@@ -35,6 +43,7 @@ const Home = () => {
                     taskdesc={t.taskdesc}
                     id={t.id}
                     showLink
+                    handleDelete={handleDelete}
                   />
                 );
               })}

@@ -22,3 +22,8 @@ export const GetBase64 = (file) =>
     reader.onload = () => resolve(reader.result);
     reader.onerror = (error) => reject(error);
   });
+
+export const Base64SizeValidation = (data, size = 5e6) => {
+  if (!data) return false;
+  return data.length * 2 < size;
+};
